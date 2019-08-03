@@ -3,6 +3,7 @@
 #include <windows.h>
 #include <ctime>
 #include <fstream>
+#include "getSystemVersionInfo.h"
 using std::ofstream;
 //https://msdn.microsoft.com/ja-jp/windows/aa363674(v=vs.80)
 using namespace std;
@@ -109,6 +110,11 @@ void DisplayEntries()
 }
 
 int main() {
+	string szSystemVersion = getSystemVersionInfo();
+	cout << "SystemVersion:\t";
+	if (szSystemVersion == "10.0") cout << "win10" << endl;
+	if (szSystemVersion == "6.1") cout << "win7" << endl;
+
 	DisplayEntries();
 	system("pause");
 }

@@ -1,0 +1,1 @@
+如要识别win 8.1（含）以上版本，编译时需添加（程序名).manifest 文件，具体操作参考https://www.cnblogs.com/k1988/p/4727757.html
