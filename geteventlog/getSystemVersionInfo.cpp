@@ -1,4 +1,4 @@
-
+#include "getSystemVersionInfo.h"
 #include <windows.h>
 #include <stdio.h>
 #include <iostream>
@@ -27,9 +27,11 @@ string getSystemVersionInfo()
 	//cout << "===========" << ossSystemVersion.str() << endl;
 	/*cout << "osvi.dwMajorVersion\t" << osvi.dwMajorVersion << endl;
 	cout << "osvi.dwMinorVersion\t" << osvi.dwMinorVersion << endl;*/
-	if (bIsWindowsXPorLater)
+	/*if (bIsWindowsXPorLater)
 		printf("The system meets the requirements.\n");
-	else printf("The system does not meet the requirements.\n");
+	else printf("The system does not meet the requirements.\n");*/
+	if (!bIsWindowsXPorLater)
+		printf("The system does not meet the requirements.\n");
 	//https://docs.microsoft.com/zh-cn/windows/win32/sysinfo/operating-system-version  版本号与操作系统版本的对应关系
 	return ossSystemVersion.str();
 }
